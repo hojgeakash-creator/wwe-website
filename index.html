@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WWE RAW 2015 Fan Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="hero">
+<h1>WWE RAW 2015 Fan Portal</h1>
+<p>Search superstars, explore PPVs and relive Hell in a Cell 2015</p>
+<button onclick="toggleTheme()">🌙 Toggle Theme</button>
+<button onclick="playTheme()">▶ RAW Theme</button>
+<audio id="rawTheme"><source src="audio/raw-theme.mp3" type="audio/mpeg"></audio>
+</header>
+
+<section>
+<input id="searchBox" placeholder="Search Superstar...">
+<div id="roster" class="grid"></div>
+</section>
+
+<section>
+<h2>PPV Timeline</h2>
+<div class="timeline">
+<div>Royal Rumble</div><div>WrestleMania 31</div>
+<div>SummerSlam</div><div>Night of Champions</div>
+<div>Hell in a Cell</div>
+</div>
+</section>
+
+<section>
+<h2>Undertaker vs Brock Lesnar</h2>
+<button onclick="showMatch()">View Match Details</button>
+<div id="match" class="hidden">
+<p>Hell in a Cell 2015 - Undertaker defeated Brock Lesnar after a brutal match.</p>
+<ul>
+<li>Winner: Undertaker</li>
+<li>Match Type: Hell in a Cell</li>
+<li>PPV: Hell in a Cell 2015</li>
+</ul>
+</div>
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>
