@@ -1,101 +1,71 @@
-<section class="hero">
-    <div class="overlay">
-        <h1>WWE RAW 2015</h1>
-        <p>Relive the Golden Era of WWE</p>
-        <button onclick="playTheme()">▶ RAW Theme</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electronics Store</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Electronics Hub</h1>
+    <p>Shop Premium Electronic Products</p>
+</header>
+
+<div class="container">
+
+    <div id="brandPage">
+
+        <h2>Select a Brand</h2>
+
+        <div class="brand-grid">
+
+            <div class="brand-card" onclick="showProducts('Apple')">
+                Apple
+            </div>
+
+            <div class="brand-card" onclick="showProducts('Samsung')">
+                Samsung
+            </div>
+
+            <div class="brand-card" onclick="showProducts('Sony')">
+                Sony
+            </div>
+
+            <div class="brand-card" onclick="showProducts('Dell')">
+                Dell
+            </div>
+
+            <div class="brand-card" onclick="showProducts('HP')">
+                HP
+            </div>
+
+            <div class="brand-card" onclick="showProducts('Lenovo')">
+                Lenovo
+            </div>
+
+        </div>
+
     </div>
-</section>
-<div class="superstar-card">
 
-    <img src="images/undertaker.jpg">
+    <div id="productPage" class="hidden">
 
-    <h3>The Undertaker</h3>
+        <button class="back-btn" onclick="goBack()">
+            ← Back
+        </button>
 
-    <p>7x World Champion</p>
+        <h2 id="brandTitle"></h2>
 
-</div>
-<input
-type="text"
-id="searchBox"
-placeholder="Search Superstar...">
-<button id="themeBtn">
-🌙 Dark Mode
-</button>
-<audio id="rawTheme">
+        <div id="productContainer"></div>
 
-<source
-src="audio/raw-theme.mp3"
-type="audio/mpeg">
-
-</audio>
-
-<button onclick="playTheme()">
-▶ Play RAW Theme
-</button>
-<section class="stats">
-
-<h2>
-Undertaker vs Brock Lesnar
-</h2>
-
-<div class="stat-grid">
-
-<div>
-<h3>Winner</h3>
-<p>Undertaker</p>
-</div>
-
-<div>
-<h3>Match Type</h3>
-<p>Hell In A Cell</p>
-</div>
-
-<div>
-<h3>Year</h3>
-<p>2015</p>
-</div>
-
-<div>
-<h3>PPV</h3>
-<p>Hell In A Cell</p>
-</div>
+    </div>
 
 </div>
 
-</section>
-<section class="titles">
+<script src="script.js"></script>
 
-<h2>Championship Titles</h2>
-
-<div class="gallery">
-
-<img src="images/wwe-title.jpg">
-<img src="images/ic-title.jpg">
-<img src="images/us-title.jpg">
-
-</div>
-
-</section>
-<section class="timeline">
-
-<div class="event">
-Royal Rumble
-</div>
-
-<div class="event">
-WrestleMania 31
-</div>
-
-<div class="event">
-SummerSlam
-</div>
-
-<div class="event">
-Night of Champions
-</div>
-
-<div class="event">
-Hell In A Cell
-</div>
-
-</section>
+</body>
+</html>

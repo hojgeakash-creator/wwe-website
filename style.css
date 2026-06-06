@@ -1,32 +1,99 @@
-.hero{
-    height:100vh;
-    background:url('../images/raw-banner.jpg') center/cover no-repeat;
-    position:relative;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
 }
 
-.overlay{
-    background:rgba(0,0,0,.7);
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
-.superstar-card{
-    background:#1e1e1e;
-    border-radius:12px;
-    overflow:hidden;
-    transition:.4s;
+body{
+    background:#f4f6f9;
 }
 
-.superstar-card:hover{
-    transform:translateY(-10px);
+header{
+    background:#0d47a1;
+    color:white;
+    text-align:center;
+    padding:25px;
 }
-.light{
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:30px;
+}
+
+.brand-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.brand-card{
     background:white;
-    color:black;
+    padding:40px;
+    text-align:center;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:22px;
+    font-weight:bold;
+    transition:.3s;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
 }
 
-.light .superstar-card{
-    background:#f2f2f2;
+.brand-card:hover{
+    transform:translateY(-5px);
+    background:#0d47a1;
+    color:white;
+}
+
+.hidden{
+    display:none;
+}
+
+.product-card{
+    background:white;
+    margin:20px 0;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+.product-card h3{
+    color:#0d47a1;
+    margin-bottom:10px;
+}
+
+.price{
+    color:green;
+    font-size:22px;
+    font-weight:bold;
+    margin:15px 0;
+}
+
+ul{
+    padding-left:20px;
+}
+
+.order-btn{
+    background:#28a745;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:15px;
+}
+
+.order-btn:hover{
+    background:#218838;
+}
+
+.back-btn{
+    background:#0d47a1;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    margin-bottom:20px;
+    cursor:pointer;
 }

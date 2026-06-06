@@ -1,4 +1,4 @@
-name: Deploy WWE Portal
+name: Deploy Electronics Store to S3
 
 on:
   push:
@@ -10,21 +10,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
 
-      - uses: actions/checkout@v4
-
-      - uses: aws-actions/configure-aws-credentials@v4
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v5
         with:
-          aws-access-key-id:
-            ${{ secrets.AWS_ACCESS_KEY_ID }}
-
-          aws-secret-access-key:
-            ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
-      - run: |
+      - name: Deploy Website to S3
+        run: |
           aws s3 sync . s3://wwe-website \
-          --delete \
-          --exclude ".git/*" \
-          --exclude ".github/*"
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "*.md"
+
+      - name: Deployment Complete
+        run: echo "Website deployed successfully!"
