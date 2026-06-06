@@ -1,47 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WWE RAW 2015 Fan Portal</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WWE RAW 2015</title>
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<header class="hero">
-<h1>WWE RAW 2015 Fan Portal</h1>
-<p>Search superstars, explore PPVs and relive Hell in a Cell 2015</p>
-<button onclick="toggleTheme()">🌙 Toggle Theme</button>
-<button onclick="playTheme()">▶ RAW Theme</button>
-<audio id="rawTheme"><source src="audio/raw-theme.mp3" type="audio/mpeg"></audio>
-</header>
 
-<section>
-<input id="searchBox" placeholder="Search Superstar...">
-<div id="roster" class="grid"></div>
-</section>
+    <header>
+        <h1>🔥 WWE RAW 2015 Roster 🔥</h1>
+        <p>The Biggest Superstars of WWE</p>
+    </header>
 
-<section>
-<h2>PPV Timeline</h2>
-<div class="timeline">
-<div>Royal Rumble</div><div>WrestleMania 31</div>
-<div>SummerSlam</div><div>Night of Champions</div>
-<div>Hell in a Cell</div>
-</div>
-</section>
+    <section class="roster-section">
 
-<section>
-<h2>Undertaker vs Brock Lesnar</h2>
-<button onclick="showMatch()">View Match Details</button>
-<div id="match" class="hidden">
-<p>Hell in a Cell 2015 - Undertaker defeated Brock Lesnar after a brutal match.</p>
-<ul>
-<li>Winner: Undertaker</li>
-<li>Match Type: Hell in a Cell</li>
-<li>PPV: Hell in a Cell 2015</li>
-</ul>
-</div>
-</section>
+        <h2>Superstars</h2>
 
-<script src="js/script.js"></script>
+        <div class="roster-container">
+
+            <div class="card">John Cena</div>
+            <div class="card">Roman Reigns</div>
+            <div class="card">Seth Rollins</div>
+            <div class="card">Dean Ambrose</div>
+            <div class="card">Brock Lesnar</div>
+            <div class="card">The Undertaker</div>
+            <div class="card">Randy Orton</div>
+            <div class="card">Kane</div>
+            <div class="card">Big Show</div>
+            <div class="card">Dolph Ziggler</div>
+            <div class="card">Kevin Owens</div>
+            <div class="card">Sheamus</div>
+            <div class="card">Ryback</div>
+            <div class="card">Rusev</div>
+            <div class="card">Cesaro</div>
+
+        </div>
+
+        <button class="raw-btn" onclick="showMatchPage()">
+            Enter WWE RAW
+        </button>
+
+    </section>
+
+    <section id="matchPage" class="hidden">
+
+        <h1>HELL IN A CELL 2015</h1>
+
+        <div class="match-container">
+
+            <div class="fighter">
+                <img src="images/undertaker.jpg" alt="Undertaker">
+                <h2>The Undertaker</h2>
+            </div>
+
+            <div class="vs">
+                VS
+            </div>
+
+            <div class="fighter">
+                <img src="images/brock-lesnar.jpg" alt="Brock Lesnar">
+                <h2>Brock Lesnar</h2>
+            </div>
+
+        </div>
+
+        <div class="match-details">
+            <h3>Hell In A Cell Match</h3>
+
+            <p>
+                One of the most brutal rivalries in WWE history reached its final
+                chapter inside Hell In A Cell.
+            </p>
+
+            <p>
+                The Undertaker defeated Brock Lesnar after an unforgettable
+                battle filled with steel chairs, kendo sticks and devastating
+                finishers.
+            </p>
+        </div>
+
+        <button class="back-btn" onclick="goBack()">
+            Back To Roster
+        </button>
+
+    </section>
+
+    <script src="js/script.js"></script>
+
 </body>
+
 </html>

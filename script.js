@@ -1,23 +1,41 @@
-const stars=[
-'The Undertaker','Brock Lesnar','John Cena','Roman Reigns','Seth Rollins',
-'Dean Ambrose','Randy Orton','Triple H','Bray Wyatt','Daniel Bryan','Batista',
-'Kane','Big Show','Dolph Ziggler','Kevin Owens','Cesaro','Ryback'
-];
-const roster=document.getElementById('roster');
-function render(list){
-roster.innerHTML='';
-list.forEach(s=>{
-const d=document.createElement('div');
-d.className='card';
-d.textContent=s;
-roster.appendChild(d);
-});
+function showMatchPage() {
+
+    document.querySelector(".roster-section").style.display = "none";
+
+    document.getElementById("matchPage").classList.remove("hidden");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 }
-render(stars);
-document.getElementById('searchBox').addEventListener('input',e=>{
-const q=e.target.value.toLowerCase();
-render(stars.filter(s=>s.toLowerCase().includes(q)));
+
+function goBack() {
+
+    document.querySelector(".roster-section").style.display = "block";
+
+    document.getElementById("matchPage").classList.add("hidden");
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+// Superstar card animation
+
+const cards = document.querySelectorAll(".card");
+
+cards.forEach(card => {
+
+    card.addEventListener("click", () => {
+
+        card.style.transform = "scale(1.1)";
+
+        setTimeout(() => {
+            card.style.transform = "";
+        }, 300);
+
+    });
+
 });
-function toggleTheme(){document.body.classList.toggle('light');}
-function playTheme(){document.getElementById('rawTheme').play();}
-function showMatch(){document.getElementById('match').classList.toggle('hidden');}
