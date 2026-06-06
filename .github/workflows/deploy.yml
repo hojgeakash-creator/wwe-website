@@ -24,7 +24,7 @@ jobs:
           aws-region: ap-south-1
 
       - run: |
-          aws s3 sync . s3://YOUR-BUCKET-NAME \
+          aws s3 sync . s3://wwe-website \
           --delete \
           --exclude ".git/*" \
-          --exclude ".github/*"wwe-website
+          --exclude ".github/*"
