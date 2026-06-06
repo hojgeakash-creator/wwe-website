@@ -1,41 +1,36 @@
-function showMatchPage() {
+const searchBox =
+document.getElementById("searchBox");
 
-    document.querySelector(".roster-section").style.display = "none";
+searchBox.addEventListener("keyup",()=>{
 
-    document.getElementById("matchPage").classList.remove("hidden");
+let filter =
+searchBox.value.toLowerCase();
 
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
+let cards =
+document.querySelectorAll(".superstar-card");
 
-function goBack() {
+cards.forEach(card=>{
 
-    document.querySelector(".roster-section").style.display = "block";
+let text =
+card.innerText.toLowerCase();
 
-    document.getElementById("matchPage").classList.add("hidden");
-
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
-}
-
-// Superstar card animation
-
-const cards = document.querySelectorAll(".card");
-
-cards.forEach(card => {
-
-    card.addEventListener("click", () => {
-
-        card.style.transform = "scale(1.1)";
-
-        setTimeout(() => {
-            card.style.transform = "";
-        }, 300);
-
-    });
+card.style.display =
+text.includes(filter)
+? "block"
+: "none";
 
 });
+
+});
+themeBtn.onclick = () => {
+
+document.body.classList.toggle("light");
+
+};
+function playTheme(){
+
+document
+.getElementById("rawTheme")
+.play();
+
+}
